@@ -26,9 +26,9 @@
 
 		<!-- Mobile menu toggle -->
 		<button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="<?php esc_attr_e( 'Open menu', 'tremebundus' ); ?>">
-			<span></span>
-			<span></span>
-			<span></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
 		</button>
 
 		<?php
