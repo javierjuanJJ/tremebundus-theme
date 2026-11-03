@@ -50,13 +50,5 @@
 			</svg>
 		</a>
 
-		<!-- Search form -->
-		<form class="search-form" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-			<label>
-				<span class="visually-hidden"><?php _e( 'Search', 'tremebundus' ); ?></span>
-				<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder', 'tremebundus' ); ?>" name="s" value="<?php echo esc_attr( get_search_query() ); ?>">
-			</label>
-			<button type="submit" class="search-submit"><?php _e( 'Search', 'tremebundus' ); ?></button>
-		</form>
 	</div><!-- .site-container -->
 </header><!-- #masthead -->
