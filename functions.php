@@ -2,7 +2,7 @@
 /**
  * Theme functions
  * ------------------------------------------------------------
- * Theme setup, enqueues, and navigation menus
+ * Theme setup, enqueues, navigation menus, and mobile menu.
  */
 
 // Make theme available for widgets.
@@ -36,10 +36,10 @@ function tremebundus_enqueue_assets() {
 		wp_get_theme()->get( 'Version' )
 	);
 
-	// Google Fonts: Cormorant Garamond + Inter.
+	// Google Fonts: Great Vibes (script), Cormorant Garamond (serif), Inter (sans).
 	wp_enqueue_style(
 		'tremebundus-fonts',
-		'//fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap',
+		'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&family=Inter:wght@400;500;600&display=swap',
 		[],
 		null
 	);
@@ -49,12 +49,12 @@ function tremebundus_enqueue_assets() {
 		return;
 	}
 
-	// Accessible menus script for focus-visible.
+	// Mobile menu toggle script.
 	wp_enqueue_script(
 		'tremebundus-navigation',
 		get_template_directory_uri() . '/js/navigation.js',
 		[],
-		null,
+		wp_get_theme()->get( 'Version' ),
 		true
 	);
 }
