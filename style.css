@@ -372,6 +372,12 @@ h3 {
 	list-style: none;
 }
 
+.main-nav > ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 .main-nav.open {
 	visibility: visible;
 	opacity: 1;
@@ -400,11 +406,13 @@ html.menu-open .main-nav {
 	transform: translateY(-6px) rotate(-45deg);
 }
 
-.main-nav > li {
+.main-nav > li,
+.main-nav > ul > li {
 	margin: 0;
 }
 
-.main-nav > li > a {
+.main-nav > li > a,
+.main-nav > ul > li > a {
 	color: var(--color-text);
 	text-decoration: none;
 	font-family: var(--font-serif);
@@ -421,13 +429,15 @@ html.menu-open .main-nav {
 	background: var(--color-bg-surface);
 }
 
-.main-nav > li.menu-item-has-children {
+.main-nav > li.menu-item-has-children,
+.main-nav > ul > li.menu-item-has-children {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 }
 
-.main-nav > li.menu-item-has-children > a {
+.main-nav > li.menu-item-has-children > a,
+.main-nav > ul > li.menu-item-has-children > a {
 	flex: 1;
 }
 
@@ -509,7 +519,7 @@ html.menu-open .main-nav {
 		position: static;
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
+		justify-content: center;
 		gap: clamp(var(--space-md), 3vw, var(--space-lg));
 		max-width: 1200px;
 		margin: 0 auto;
@@ -517,6 +527,7 @@ html.menu-open .main-nav {
 		background: transparent;
 		box-shadow: none;
 		box-sizing: border-box;
+		width: 100%;
 		/* Reset mobile hidden state for desktop */
 		visibility: visible;
 		opacity: 1;
@@ -526,17 +537,33 @@ html.menu-open .main-nav {
 		transition: none;
 	}
 
+	.main-nav > ul {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: clamp(var(--space-md), 3vw, var(--space-lg));
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 var(--space-sm);
+		box-sizing: border-box;
+	}
+
 	.primary-navigation {
 		position: relative;
 	}
 
-	.main-nav > li {
+	.main-nav > li,
+	.main-nav > ul > li {
 		margin: 0;
 		border-bottom: none;
 		position: relative;
+		text-align: center;
 	}
 
-	.main-nav > li > a {
+	.main-nav > li > a,
+	.main-nav > ul > li > a {
 		font-family: var(--font-sans);
 		font-size: 0.95rem;
 		font-weight: 500;
@@ -546,7 +573,8 @@ html.menu-open .main-nav {
 		white-space: nowrap;
 	}
 
-	.main-nav > li.menu-item-has-children {
+	.main-nav > li.menu-item-has-children,
+	.main-nav > ul > li.menu-item-has-children {
 		display: block;
 	}
 
