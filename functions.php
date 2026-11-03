@@ -8,6 +8,17 @@
 // Make theme available for widgets.
 register_sidebar( [ 'name' => 'Sidebar', 'id' => 'sidebar-1' ] );
 
+/**
+ * Display post date and author.
+ */
+function tremebundus_posted_on() {
+	printf( '<span class="posted-on"><a href="%1$s" rel="bookmark"><span class="screen-reader-text">%2$s</span> %3$s</a></span>',
+		esc_url( get_permalink() ),
+		esc_html__( 'Published', 'tremebundus' ),
+		get_the_date()
+	);
+}
+
 // Add theme support features.
 add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
