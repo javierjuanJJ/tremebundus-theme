@@ -993,52 +993,6 @@ input[type="submit"]:focus-visible,
 	background: var(--color-accent);
 }
 
-/* Three blocks: Gallery / Shorts / Poems */
-.home-blocks {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: var(--space-lg);
-	margin-bottom: var(--space-2xl);
-}
-
-.home-block {
-	text-align: left;
-}
-
-.home-block-image {
-	width: 100%;
-	height: 350px;
-	object-fit: cover;
-	margin-bottom: var(--space-md);
-	border-radius: 2px;
-}
-
-.home-block-title {
-	font-family: var(--font-serif);
-	font-size: var(--type-xl);
-	color: var(--color-text);
-	margin: 0 0 var(--space-xs);
-}
-
-.home-block-desc {
-	font-family: var(--font-sans);
-	font-size: var(--type-sm);
-	color: var(--color-text-muted);
-	margin: 0;
-}
-
-.home-block-link {
-	color: var(--color-accent);
-	text-decoration: underline;
-	font-family: var(--font-sans);
-	font-size: var(--type-sm);
-	font-weight: 500;
-}
-
-.home-block-link:hover {
-	color: var(--color-accent-hover);
-}
-
 /* ===== Bio / single post ===== */
 
 .bio-intro {
@@ -1557,10 +1511,6 @@ input[type="submit"]:focus-visible,
 
 	.home-hero-name {
 		font-size: clamp(2rem, 10vw, 3rem);
-	}
-
-	.home-blocks {
-		grid-template-columns: 1fr;
 	}
 
 	.gallery-grid {

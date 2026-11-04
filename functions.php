@@ -5,8 +5,7 @@
  * Theme setup, enqueues, navigation menus, mobile menu, contact form.
  */
 
-// Make theme available for widgets.
-register_sidebar( [ 'name' => 'Sidebar', 'id' => 'sidebar-1' ] );
+
 
 /**
  * Display post date and author.

@@ -62,41 +62,10 @@ get_header(); ?>
 				<li><?php _e( 'Cortometrajes de terror y fantasía con banda sonora original.', 'tremebundus' ); ?></li>
 			</ul>
 		</section>
-
-		<div class="home-blocks">
-			<div class="home-block">
-				<?php
-				$gallery_img = get_theme_file_uri( 'img/Cortometrajes--11-03-2026_02_20_PM.png' );
-				?>
-				<img class="home-block-image" src="<?php echo esc_url( $gallery_img ); ?>" alt="<?php esc_attr_e( 'Óleo sobre lienzo — flores rojas y amarillas sobre fondo oscuro', 'tremebundus' ); ?>" loading="lazy">
-				<h3 class="home-block-title"><?php _e( 'Galería', 'tremebundus' ); ?></h3>
-				<p class="home-block-desc"><?php _e( 'Obras en óleo, tinta y otras técnicas. Consulta disponibilidad y precio en cada ficha.', 'tremebundus' ); ?></p>
-				<a href="<?php echo esc_url( home_url( '/galeria' ) ); ?>" class="home-block-link"><?php _e( 'Ir a la galería →', 'tremebundus' ); ?></a>
-			</div>
-			<div class="home-block">
-				<?php
-				$shorts_img = get_theme_file_uri( 'img/Cortometrajes--11-03-2026_02_20_PM.png' );
-				?>
-				<img class="home-block-image" src="<?php echo esc_url( $shorts_img ); ?>" alt="<?php esc_attr_e( 'Fotograma del cortometraje El Ladrón de Cabezas — niño con camiseta de rayas', 'tremebundus' ); ?>" loading="lazy">
-				<h3 class="home-block-title"><?php _e( 'Cortometrajes', 'tremebundus' ); ?></h3>
-				<p class="home-block-desc"><?php _e( 'Terror y fantasía en stop motion. Póster, sinopsis, créditos y reproductor de cada corto.', 'tremebundus' ); ?></p>
-				<a href="<?php echo esc_url( home_url( '/cortos' ) ); ?>" class="home-block-link"><?php _e( 'Ver cortometrajes →', 'tremebundus' ); ?></a>
-			</div>
-			<div class="home-block">
-				<?php
-				$poems_img = get_theme_file_uri( 'img/Poemas--11-03-2026_02_21_PM.png' );
-				?>
-				<img class="home-block-image" src="<?php echo esc_url( $poems_img ); ?>" alt="<?php esc_attr_e( 'Página de poemas — tipografía serif sobre fondo negro', 'tremebundus' ); ?>" loading="lazy">
-				<h3 class="home-block-title"><?php _e( 'Poesías', 'tremebundus' ); ?></h3>
-				<p class="home-block-desc"><?php _e( 'Poemas en columna estrecha con amplio interlineado, uno por bloque.', 'tremebundus' ); ?></p>
-				<a href="<?php echo esc_url( home_url( '/poesias' ) ); ?>" class="home-block-link"><?php _e( 'Leer poemas →', 'tremebundus' ); ?></a>
-			</div>
-		</div>
 		<?php endif; ?>
 
 	</div><!-- .main-content -->
 </main><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

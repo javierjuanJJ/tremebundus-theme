@@ -8,6 +8,17 @@
       "headers": {
         "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
       }
+    },
+    "mcp-wordpress": {
+      "type": "local",
+      "command": ["npx","-y", "mcp-wordpress"],
+      "enabled": true,
+      "environment": {
+        "WORDPRESS_SITE_URL": "http://test-1.local",
+        "WORDPRESS_USERNAME": "test2",
+        "WORDPRESS_APP_PASSWORD": "qmD4 wx1z NMzv XhOC DZS3 AoQF",
+        "ALLOW_INSECURE_HTTP": "true"
+      }
     }
   }
 }

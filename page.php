@@ -74,5 +74,4 @@ get_header(); ?>
 	</div><!-- .main-content -->
 </main><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
