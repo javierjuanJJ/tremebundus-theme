@@ -59,7 +59,9 @@ function tremebundus_enqueue_assets() {
 		true
 	);
 
-	// GSAP + plugins (ScrollTrigger, SplitText, Flip) — loaded with defer, only on front-end.
+	// GSAP + plugins libres (ScrollTrigger, Flip). SplitText es un plugin de
+	// pago de GSAP (no disponible gratis en cdnjs); se reemplaza por una
+	// división de caracteres ligera en js/animations.js.
 	wp_enqueue_script(
 		'gsap-core',
 		'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',
@@ -70,13 +72,6 @@ function tremebundus_enqueue_assets() {
 	wp_enqueue_script(
 		'gsap-scrolltrigger',
 		'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js',
-		[ 'gsap-core' ],
-		'3.12.5',
-		true
-	);
-	wp_enqueue_script(
-		'gsap-splittext',
-		'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js',
 		[ 'gsap-core' ],
 		'3.12.5',
 		true
@@ -93,7 +88,7 @@ function tremebundus_enqueue_assets() {
 	wp_enqueue_script(
 		'tremebundus-animations',
 		get_template_directory_uri() . '/js/animations.js',
-		[ 'gsap-core', 'gsap-scrolltrigger', 'gsap-splittext', 'gsap-flip' ],
+		[ 'gsap-core', 'gsap-scrolltrigger', 'gsap-flip' ],
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
