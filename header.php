@@ -10,30 +10,30 @@
 <body <?php body_class(); ?>>
 
 <!-- Skip link for keyboard navigation -->
-<a class="skip-link" href="#content"><?php _e( 'Skip to content', 'tremebundus' ); ?></a>
+<a class="skip-link" href="#content"><?php _e( 'Saltar al contenido', 'tremebundus' ); ?></a>
 
 <header id="masthead" class="site-header">
 	<div class="site-container">
 		<div class="site-branding">
 			<?php
-			// Site title as script logo, linked to home.
+			// Site title as script logo, linked to home. Descriptive alt for the logo-as-link.
 			$home_url = esc_url( home_url( '/' ) );
 			$site_name = get_bloginfo( 'name' );
 			?>
-			<a class="site-title" href="<?php echo $home_url; ?>"><?php echo esc_html( $site_name ); ?></a>
+			<a class="site-title" href="<?php echo $home_url; ?>" aria-label="<?php echo esc_attr( sprintf( __( 'Ir al inicio — %s', 'tremebundus' ), $site_name ) ); ?>"><?php echo esc_html( $site_name ); ?></a>
 			<p class="site-description"><?php echo esc_html( get_bloginfo( 'description' ) ); ?></p>
 		</div><!-- .site-branding -->
 
 		<div class="header-actions">
 			<!-- Mobile menu toggle -->
-			<button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="<?php esc_attr_e( 'Open menu', 'tremebundus' ); ?>">
+			<button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="<?php esc_attr_e( 'Abrir menú', 'tremebundus' ); ?>">
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
 			</button>
 
 			<!-- Cart icon -->
-			<a class="cart-link" href="<?php echo esc_url( home_url( '/carrito' ) ); ?>" aria-label="<?php esc_attr_e( 'Cart', 'tremebundus' ); ?>">
+			<a class="cart-link" href="<?php echo esc_url( home_url( '/carrito' ) ); ?>" aria-label="<?php esc_attr_e( 'Carrito', 'tremebundus' ); ?>">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 					<circle cx="9" cy="21" r="1"></circle>
 					<circle cx="20" cy="21" r="1"></circle>
@@ -43,7 +43,7 @@
 		</div><!-- .header-actions -->
 	</div><!-- .site-container -->
 
-	<nav class="primary-navigation" aria-label="<?php esc_attr_e( 'Primary navigation', 'tremebundus' ); ?>">
+	<nav class="primary-navigation" aria-label="<?php esc_attr_e( 'Menú principal', 'tremebundus' ); ?>">
 		<?php
 		wp_nav_menu( [
 			'theme_location' => 'primary',

@@ -28,8 +28,41 @@ get_header(); ?>
 					echo '</div>';
 				endif;
 
-				// The content.
+				// Capture content so we can transform poem <pre> blocks into proper <article>/<h2> structure.
+				ob_start();
 				the_content();
+				$content = ob_get_clean();
+
+				if ( is_page( 'poesias' ) ) :
+					// Transform each <pre> block into an <article class="poema"> with <h2> title and <p> lines.
+					$content = preg_replace_callback(
+						'/<pre>(.*?)<\/pre>/s',
+						function( $matches ) {
+							$text = $matches[1];
+							$lines = explode( "\n", $text );
+							$html = '';
+							$first = true;
+							foreach ( $lines as $line ) {
+								$line = trim( $line );
+								if ( $line === '' ) {
+									$html .= '<br>';
+									continue;
+								}
+								if ( $first ) {
+									$html .= '<h2 class="poema-title">' . esc_html( $line ) . '</h2>';
+									$first = false;
+								} else {
+									$html .= '<p>' . esc_html( $line ) . '</p>';
+								}
+							}
+							$html .= '<p class="poema-author">Daniel Milán</p>';
+							return '<article class="poema">' . $html . '</article>';
+						},
+						$content
+					);
+				endif;
+
+				echo $content;
 
 				// Edit link.
 				edit_post_link(

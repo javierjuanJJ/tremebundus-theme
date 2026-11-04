@@ -20,8 +20,8 @@
 			<div class="footer-section footer-social">
 				<h3><?php _e( 'Sígueme en', 'tremebundus' ); ?></h3>
 				<ul class="social-links">
-					<li><a href="https://www.instagram.com/tremebundus_/" target="_blank" rel="noopener"><?php _e( 'Instagram', 'tremebundus' ); ?></a></li>
-					<li><a href="https://www.youtube.com/@Tremebundus13" target="_blank" rel="noopener"><?php _e( 'YouTube', 'tremebundus' ); ?></a></li>
+					<li><a href="https://www.instagram.com/tremebundus_/" target="_blank" rel="noopener"><?php _e( 'Instagram de Tremebundus', 'tremebundus' ); ?></a></li>
+					<li><a href="https://www.youtube.com/@Tremebundus13" target="_blank" rel="noopener"><?php _e( 'YouTube de Tremebundus', 'tremebundus' ); ?></a></li>
 				</ul>
 			</div>
 		</div>
